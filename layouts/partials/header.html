@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="{{ .Site.Language.Lang | default "en-us" }}">
+	<head>
+	  <title>{{ .Title }}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="referrer" content="origin">
+
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . | plainify }}">{{ end }}
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ range .AlternativeOutputFormats -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
+    {{ hugo.Generator }}
+
+    {{ partial "stylesheets.html" . }}
+    {{ range .Translations }}
+    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+    {{ end }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ template "_internal/opengraph.html" . }}
+    {{ partial "hooks/head-end.html" . }}
+	</head>
+	<body class="landing is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+          <header id="header"{{ if .Page.IsHome }} class="alt"{{ end }}>
+            <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+                  <a href="#menu" class="menuToggle"><span>{{ i18n "menu" }}</span></a>
+									<div id="menu">
+										<ul>
+				              {{ range .Site.Params.menu.main }}
+				              <li><a href="{{ .url | relURL }}">{{ .title }}</a></li>
+				              {{ end }}
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(90619735, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/90619735" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --> 
