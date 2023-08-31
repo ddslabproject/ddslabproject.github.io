@@ -1,0 +1,101 @@
+baseURL: "https://www.ddslab.ru/"
+theme: "up-business-theme"
+languageCode: "ru-RU"
+publishDir: "docs"
+ignoreErrors: "error-remote-getjson"
+
+title: "DDSLab"
+
+# googleAnalytics: ""
+
+summaryLength: 20
+
+params:
+  title: "DDSLab"
+  description: "От интуиции к закономерности"
+  images: 
+    - "images/hero-image.png"
+
+  logo: "arrow-up.png"
+
+  favicons:
+    themeColor: "#FFFFFF"
+    backgroundColor: "#FFFFFF"
+    faviconColor: "#000000"
+
+  social:
+#    dribbble: "#"
+#    instagram: "#"
+#    facebook: "#"
+#    twitter: "#"
+
+  location:
+     - "г. Москва"
+    # - "4517 Washington Ave. Manchester, Kentucky 39495"
+
+  contact:
+    - "i2z1@ddslab.ru"
+#    - "207.555.0119"
+
+  copyright: "© 2023 DDSLab.ru"
+
+menus:
+  main:
+    - name: "Главная"
+      url: "/#hero"
+      weight: 1
+
+    - name: "Контакты"
+      url: "/#"
+      weight: 2
+
+    # - name: "Our team"
+    #   url: "/#"
+    #   weight: 3
+    #
+    # - name: "Pricing"
+    #   url: "/#"
+    #   weight: 4
+    #
+    # - name: "Blog"
+    #   url: "/blog"
+    #   weight: 5
+
+  buttons:
+    - name: "Связаться с нами"
+      url: "mailto:i2z1@ddslab.ru"
+      weight: 5
+      pre: "btn btn-primary text-light"
+
+  footer:
+    - name: "Главная"
+      url: "/#hero"
+      weight: 1
+
+    - name: "Контакты"
+      url: "/#"
+      weight: 2
+#
+#     - name: "Home"
+#       url: "/#hero"
+#       weight: 1
+#
+#     - name: "How we work"
+#       url: "/#"
+#       weight: 2
+#
+#     - name: "Our team"
+#       url: "/#"
+#       weight: 3
+#
+#     - name: "Pricing"
+#       url: "/#"
+#       weight: 4
+#
+#     - name: "Blog"
+#       url: "/blog"
+#       weight: 5
+
+taxonomies:
+  series: "series"
+  tags: "tags"

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.92.2" />
   
-  <title>DDSLab </title>
+  <title>DDSLab  | Emoji Support </title>
 
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-  <meta name="description" content="От интуиции к закономерности" />
+  <meta name="description" content="Guide to emoji usage in Hugo" />
 
   
   
@@ -51,11 +50,14 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.ddslab.ru/images/hero-image.png"/>
 
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="От интуиции к закономерности"/>
+<meta name="twitter:title" content="Emoji Support"/>
+<meta name="twitter:description" content="Guide to emoji usage in Hugo"/>
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="От интуиции к закономерности">
+<meta itemprop="name" content="Emoji Support">
+<meta itemprop="description" content="Guide to emoji usage in Hugo"><meta itemprop="datePublished" content="2019-03-05T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-05T00:00:00+00:00" />
+<meta itemprop="wordCount" content="123"><meta itemprop="image" content="https://www.ddslab.ru/images/hero-image.png"/>
+<meta itemprop="keywords" content="emoji," />
 
 
 
@@ -157,7 +159,6 @@
 
 
   
-  <link rel="alternate" type="application/rss+xml" href="https://www.ddslab.ru/index.xml" title="DDSLab" />
   </head>
 
   <body><nav class="navbar navbar-expand-xl navbar-light bg-light py-4">
@@ -195,105 +196,38 @@
   </div>
 </nav>
 
-  <section class="section hero py-5">
-  <div class="container">
-    <div class="row flex-column flex-xl-row-reverse">
-      <div class="col-12 col-xl-6  d-flex flex-column justify-content-center hero-image">
-        
-  <img class="img-fluid" src="https://www.ddslab.ru/images/hero-image.png" alt="images/hero-image.png" width="1772" height="1773">
-
-
-      </div>
-      <div class="col-12 col-xl-6 d-flex flex-column justify-content-center">
-        
-          <h3 class="hero-title fw-bold display-1 text-primary text-center text-xl-start pb-4">От интуиции к закономерности</h3>
-        
-        
-          <p class="text-center text-black-61 text-xl-start pb-4">Несем осознанность в процессы управления, автоматизируем рутину, защищаем информационные активы</p>
-        
-        <div class="d-flex flex-column flex-xl-row">
+  <section class="section blog-single py-5">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-12">
           
-            <a class="btn btn-primary text-light px-4 my-1" href="#">Контакты</a>
+            <h2 class="display-1 fw-bold text-center text-primary pb-3">Emoji Support</h2>
           
           
-            <a class="btn btn-outline-primary px-4 my-1 ms-xl-4" href="mailto:i2z1@ddslab.ru">Напишите нам<span class="ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-</svg>
-</span></a>
+            <p class="text-black-61 text-center pb-3">Guide to emoji usage in Hugo</p>
           
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-  <section class="section brands py-5">
-  <div class="container">
-    <div class="row">
-      
-    </div>
-    <div class="row align-items-center justify-content-center">
-      
-    </div>
-  </div>
-</section>
-
-  <section class="section portfolio">
-  <div class="container">
-    
-  </div>
-</section>
-
-  <section class="section services py-5">
-  <div class="container">
-    <div class="row justify-content-center pb-5">
-      <div class="col-12 col-xl-6">
-        
-        
+      <div class="row pb-5">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="blog-content fs-5">
+            <p>Emoji can be enabled in a Hugo project in a number of ways.</p>
+<p>The <a href="https://gohugo.io/functions/emojify/"><code>emojify</code></a> function can be called directly in templates or <a href="https://gohugo.io/templates/shortcode-templates/#inline-shortcodes">Inline Shortcodes</a>.</p>
+<p>To enable emoji globally, set <code>enableEmoji</code> to <code>true</code> in your site&rsquo;s <a href="https://gohugo.io/getting-started/configuration/">configuration</a> and then you can type emoji shorthand codes directly in content files; e.g.</p>
+<!-- raw HTML omitted -->
+<p>The <a href="http://www.emoji-cheat-sheet.com/">Emoji cheat sheet</a> is a useful reference for emoji shorthand codes.</p>
+<hr>
+<p><strong>N.B.</strong> The above steps enable Unicode Standard emoji characters and sequences in Hugo, however the rendering of these glyphs depends on the browser and the platform. To style the emoji you can either use a third party emoji font or a font stack; e.g.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">.emoji {
+  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+}</code></pre></div>
+          </div>
+        </div>
+      </div>
+      <div class="row pb-5">
       </div>
     </div>
-    <div class="row g-5">
-      
-    </div>
-  </div>
-</section>
-
-  <section class="section testimonials py-5">
-  <div class="container">
-    <div class="row pb-5">
-      <div class="col-12">
-        
-      </div>
-    </div>
-    <div class="row">
-      
-    </div>
-    <div class="row">
-      
-    </div>
-  </div>
-</section>
-
-  <section class="section cta py-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-xl-6">
-        
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-12 col-xl-6 text-center">
-        
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-12 col-xl-6 text-center">
-        
-      </div>
-    </div>
-  </div>
-</section>
-
+  </section>
 <footer class="shared footer bg-blue-light py-5">
   <div class="container">
     <div class="row pb-5">

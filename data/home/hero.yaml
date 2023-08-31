@@ -1,0 +1,15 @@
+enabled: true
+id: "hero"
+
+content:
+  title: "От интуиции к закономерности"
+  text: "Несем осознанность в процессы управления, автоматизируем рутину, защищаем информационные активы"
+
+  buttonPrimary:
+    label: "Контакты"
+    url: "#"
+
+  buttonSecondary:
+    label: "Напишите нам"
+    url: "mailto:i2z1@ddslab.ru"
+

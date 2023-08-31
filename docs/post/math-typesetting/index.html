@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.92.2" />
   
-  <title>DDSLab </title>
+  <title>DDSLab  | Math Typesetting </title>
 
   
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-  <meta name="description" content="От интуиции к закономерности" />
+  <meta name="description" content="A brief guide to setup KaTeX" />
 
   
   
@@ -51,11 +50,14 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://www.ddslab.ru/images/hero-image.png"/>
 
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="От интуиции к закономерности"/>
+<meta name="twitter:title" content="Math Typesetting"/>
+<meta name="twitter:description" content="A brief guide to setup KaTeX"/>
 
-<meta itemprop="name" content="">
-<meta itemprop="description" content="От интуиции к закономерности">
+<meta itemprop="name" content="Math Typesetting">
+<meta itemprop="description" content="A brief guide to setup KaTeX"><meta itemprop="datePublished" content="2019-03-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-03-08T00:00:00+00:00" />
+<meta itemprop="wordCount" content="114"><meta itemprop="image" content="https://www.ddslab.ru/images/hero-image.png"/>
+<meta itemprop="keywords" content="" />
 
 
 
@@ -157,7 +159,6 @@
 
 
   
-  <link rel="alternate" type="application/rss+xml" href="https://www.ddslab.ru/index.xml" title="DDSLab" />
   </head>
 
   <body><nav class="navbar navbar-expand-xl navbar-light bg-light py-4">
@@ -195,105 +196,50 @@
   </div>
 </nav>
 
-  <section class="section hero py-5">
-  <div class="container">
-    <div class="row flex-column flex-xl-row-reverse">
-      <div class="col-12 col-xl-6  d-flex flex-column justify-content-center hero-image">
-        
-  <img class="img-fluid" src="https://www.ddslab.ru/images/hero-image.png" alt="images/hero-image.png" width="1772" height="1773">
-
-
-      </div>
-      <div class="col-12 col-xl-6 d-flex flex-column justify-content-center">
-        
-          <h3 class="hero-title fw-bold display-1 text-primary text-center text-xl-start pb-4">От интуиции к закономерности</h3>
-        
-        
-          <p class="text-center text-black-61 text-xl-start pb-4">Несем осознанность в процессы управления, автоматизируем рутину, защищаем информационные активы</p>
-        
-        <div class="d-flex flex-column flex-xl-row">
+  <section class="section blog-single py-5">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-12">
           
-            <a class="btn btn-primary text-light px-4 my-1" href="#">Контакты</a>
+            <h2 class="display-1 fw-bold text-center text-primary pb-3">Math Typesetting</h2>
           
           
-            <a class="btn btn-outline-primary px-4 my-1 ms-xl-4" href="mailto:i2z1@ddslab.ru">Напишите нам<span class="ms-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-</svg>
-</span></a>
+            <p class="text-black-61 text-center pb-3">A brief guide to setup KaTeX</p>
           
         </div>
       </div>
-    </div>
-  </div>
-</section>
+      <div class="row pb-5">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="blog-content fs-5">
+            <p>Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.</p>
+<p>In this example we will be using <a href="https://katex.org/">KaTeX</a></p>
+<ul>
+<li>Create a partial under <code>/layouts/partials/math.html</code></li>
+<li>Within this partial reference the <a href="https://katex.org/docs/autorender.html">Auto-render Extension</a> or host these scripts locally.</li>
+<li>Include the partial in your templates like so:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">{{</span> <span style="color:#66d9ef">if</span> or .Params.math .Site.Params.math <span style="color:#f92672">}}</span>
+<span style="color:#f92672">{{</span> partial <span style="color:#e6db74">&#34;math.html&#34;</span> . <span style="color:#f92672">}}</span>
+<span style="color:#f92672">{{</span> end <span style="color:#f92672">}}</span>
+</code></pre></div><ul>
+<li>To enable KaTex globally set the parameter <code>math</code> to <code>true</code> in a project&rsquo;s configuration</li>
+<li>To enable KaTex on a per page basis include the parameter <code>math: true</code> in content files</li>
+</ul>
+<p><strong>Note:</strong> Use the online reference of <a href="https://katex.org/docs/supported.html">Supported TeX Functions</a></p>
 
-  <section class="section brands py-5">
-  <div class="container">
-    <div class="row">
-      
-    </div>
-    <div class="row align-items-center justify-content-center">
-      
-    </div>
-  </div>
-</section>
+<h3 id="examples">Examples</h3>
 
-  <section class="section portfolio">
-  <div class="container">
-    
-  </div>
-</section>
-
-  <section class="section services py-5">
-  <div class="container">
-    <div class="row justify-content-center pb-5">
-      <div class="col-12 col-xl-6">
-        
-        
+<p>Block math:
+$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$</p>
+          </div>
+        </div>
+      </div>
+      <div class="row pb-5">
       </div>
     </div>
-    <div class="row g-5">
-      
-    </div>
-  </div>
-</section>
-
-  <section class="section testimonials py-5">
-  <div class="container">
-    <div class="row pb-5">
-      <div class="col-12">
-        
-      </div>
-    </div>
-    <div class="row">
-      
-    </div>
-    <div class="row">
-      
-    </div>
-  </div>
-</section>
-
-  <section class="section cta py-5">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-xl-6">
-        
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-12 col-xl-6 text-center">
-        
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-12 col-xl-6 text-center">
-        
-      </div>
-    </div>
-  </div>
-</section>
-
+  </section>
 <footer class="shared footer bg-blue-light py-5">
   <div class="container">
     <div class="row pb-5">
